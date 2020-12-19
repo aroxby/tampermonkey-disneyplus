@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      body {
+        width: 100%;
+      }
+      td {
+        width: 50%;
+      }
+      input {
+        width: 100%;
+      }
+      #console {
+        border-style: inset;
+      }
+    </style>
+    <script>
+      function prepend(msg) {
+      	let console = document.getElementById("console");
+      	console.innerText = console.innerText + msg + '\n';
+      }
+      
+      function btn1() {
+      	prepend("#1");
+      }
+      
+      function btn2() {
+      	prepend("#2");
+      }
+      
+      function btn3() {
+      	prepend("#3");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="button1" onclick="btn1();"/><br/>
+    <input type="button" value="button2" onclick="btn2();"/><br/>
+    <input type="button" value="button3" onclick="btn3();"/><br/>
+    <div id="console">Ready.<br/></div>
+  </body>
+</html>
