@@ -21,6 +21,10 @@
       	console.innerText = console.innerText + msg + '\n';
       }
       
+      function badBtn() {
+        prepend("Don't press this button");
+      }
+      
       function btn1() {
       	prepend("#1");
       }
@@ -32,9 +36,14 @@
       function btn3() {
       	prepend("#3");
       }
+      
+      document.onload = function() {
+        document.getElementById("badBtn").focus();
+      };
     </script>
   </head>
   <body>
+    <input type="button" value="bad button" id="badBtn" onclick="badBtn();"/><br/>
     <input type="button" value="button1" onclick="btn1();"/><br/>
     <input type="button" value="button2" onclick="btn2();"/><br/>
     <input type="button" value="button3" onclick="btn3();"/><br/>
