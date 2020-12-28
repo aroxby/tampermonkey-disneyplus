@@ -41,6 +41,18 @@
         document.getElementById("badBtn").focus();
       };
     </script>
+    <script>
+      function addListener() {
+        document.addEventListener('keydown', function(event) {
+          if (event.keyCode === ' '.charCodeAt(0)) {
+            document.getElementById('btn1').click();
+            event.preventDefault();
+          }
+        });
+      }
+
+      addListener();
+    </script>
   </head>
   <body>
     <input type="button" value="bad button" id="badBtn" onclick="badBtn();"/><br/>
