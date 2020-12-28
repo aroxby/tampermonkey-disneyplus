@@ -17,26 +17,26 @@
     </style>
     <script>
       function prepend(msg) {
-      	let console = document.getElementById("console");
-      	console.innerText = console.innerText + msg + '\n';
+        let console = document.getElementById("console");
+        console.innerText = console.innerText + msg + '\n';
       }
-      
+
       function badBtn() {
         prepend("Don't press this button");
       }
-      
+
       function btn1() {
-      	prepend("#1");
+        prepend("#1");
       }
-      
+
       function btn2() {
-      	prepend("#2");
+        prepend("#2");
       }
-      
+
       function btn3() {
-      	prepend("#3");
+        prepend("#3");
       }
-      
+
       window.onload = function() {
         document.getElementById("badBtn").focus();
       };
