@@ -42,16 +42,22 @@
       };
     </script>
     <script>
-      function addListener() {
+      function addListeners() {
+        let mapping = {};  // These complex index expressions don't work with literal notation
+        mapping[' '.charCodeAt(0)] = 'btn1';
+        mapping['F'.charCodeAt(0)] = 'btn2';
+        mapping['C'.charCodeAt(0)] = 'btn3';
+
         document.addEventListener('keydown', function(event) {
-          if (event.keyCode === ' '.charCodeAt(0)) {
-            document.getElementById('btn1').click();
+          let mappedId = mapping[event.keyCode];
+          if (mappedId !== undefined) {
+            document.getElementById(mappedId).click();
             event.preventDefault();
           }
         });
       }
 
-      addListener();
+      addListeners();
     </script>
   </head>
   <body>
